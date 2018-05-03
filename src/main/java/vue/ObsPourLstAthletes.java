@@ -16,4 +16,5 @@ public class ObsPourLstAthletes implements Observer {
             case Action.LOAD: lst.removeAll(); ((ListeAthletes)o).setPos(ListeAthletes.NO_POS); for (int i=0; i < ((ListeAthletes)o).size(); i++) { lst.add(((ListeAthletes)o).getAthlete(i).toString()); } break;
         }
     }
+    
 }

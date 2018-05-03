@@ -9,10 +9,11 @@ public class PaysDao {
     
     private static final String FICHIER_PAYS = "Pays.txt";
 
+    
     public PaysDao(FileReader reader) {
     }
 
-    public static ArrayList getListePays() {
+    public static ArrayList getListePays() {//retourne la liste des pays
         String[] tabPays = FileStr.read(FICHIER_PAYS);
         ArrayList aLst = new ArrayList();
         for (int i=0; i<tabPays.length; i++) { 

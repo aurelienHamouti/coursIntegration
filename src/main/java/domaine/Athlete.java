@@ -15,6 +15,7 @@ public class Athlete {
     public Pays getPays() { return pays; }
     public Sport getSport() { return sport; }
     
+    
     public boolean equals(Object obj) { return this.no == ((Athlete)obj).no; }
     public String toString() { return prenom+" "+nom; }
 }

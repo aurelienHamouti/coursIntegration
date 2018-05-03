@@ -12,7 +12,7 @@ public class FrmMain extends java.awt.Frame {
     private ListeAthletes listeAthletes;
 
     public FrmMain() {
-        initComponents();
+        initComponents();//initialisation
         chargerDonnees();
     }
 
@@ -21,6 +21,7 @@ public class FrmMain extends java.awt.Frame {
         listeSports = new ListeSports(new ObsPourLstSports(lstSports));
         listeAthletes = new ListeAthletes(new ObsPourLstAthletes(lstAthletes));
         listeAthletes.addObserver(new ObsPourDetail(tfNo, tfPrenom, tfNom, tfPays, tfSport));
+        
         
         Observer obs = new ObsPourLoadAthletes(listeAthletes, listePays, listeSports);
         listePays.addObserver(obs);
@@ -143,10 +144,12 @@ public class FrmMain extends java.awt.Frame {
 
     private void lstSportsItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_lstSportsItemStateChanged
         listeSports.setPos(lstSports.getSelectedIndex());
+        
     }//GEN-LAST:event_lstSportsItemStateChanged
 
     private void lstAthletesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_lstAthletesItemStateChanged
         listeAthletes.setPos(lstAthletes.getSelectedIndex());
+        
     }//GEN-LAST:event_lstAthletesItemStateChanged
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

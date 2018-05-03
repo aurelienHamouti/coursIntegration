@@ -12,6 +12,7 @@ public class ListeSports extends ListeObjects {
         setChanged(); notifyObservers(new Action(Action.LOAD));
    }
 
+    
     public Sport getSport() { return (Sport)super.get(); }
     public Sport getSport(int pos) { return (Sport)super.get(pos); }
 }

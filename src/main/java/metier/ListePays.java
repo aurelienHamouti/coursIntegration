@@ -12,6 +12,7 @@ public class ListePays extends ListeObjects {
         setChanged(); notifyObservers(new Action(Action.LOAD));
    }
 
+    
     public Pays getPays() { return (Pays)super.get(); }
     public Pays getPays(int pos) { return (Pays)super.get(pos); }
 }

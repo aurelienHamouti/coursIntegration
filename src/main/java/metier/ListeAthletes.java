@@ -17,6 +17,7 @@ public class ListeAthletes extends ListeObjects {
         setChanged(); notifyObservers(new Action(Action.LOAD));
    }
 
+    
     public Athlete getAthlete() { return (Athlete)super.get(); }
     public Athlete getAthlete(int pos) { return (Athlete)super.get(pos); }
 }

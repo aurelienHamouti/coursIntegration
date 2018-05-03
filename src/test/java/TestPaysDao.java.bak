@@ -38,11 +38,11 @@ public class TestPaysDao {
     public void shouldReturnSingleListSportArrayHasOnline()
     {
       
-        when(reader.readPays()).thenReturn(new String[]{"108;LAT;Lettonie"});
+        when(reader.readPays()).thenReturn(new String[]{"1'europe;allemagne"});
         List<Pays> pays = dao.getListePays();
         assertThat(pays,is(not(empty())));
         assertThat(pays,hasSize(1));
-        assertThat(pays,contains(new Pays(108,"LAT","Lettonie")));
+        assertThat(pays,contains(new Pays(1,"europe","allemagne")));
         
     }
 }

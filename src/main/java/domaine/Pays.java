@@ -5,7 +5,7 @@ public class Pays {
     private String code;
     private String nom;
     
-    public Pays(int no, String code, String nom) { this.no=no; this.code=code; this.nom=nom; }
+    public Pays(int no, String codePays, String nomPays) { this.no=no; this.code=codePays; this.nom=nomPays; }
     public Pays(int no) { this(no, "", ""); }
     
     public int getNo() { return no; }
