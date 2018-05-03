@@ -29,8 +29,8 @@ public class TestPaysDao {
     public void shouldReturnEmptyListWhenArrayEmpty()
     {
         when(reader.readPays()).thenReturn(new String[]{});
-        List<Pays> pays = dao.getListePays();
-        assertThat(pays, empty());
+        List<Pays> pays = new PaysDao(new FileReader()).getListePays();
+		assertThat(pays.isEmpty(), is(false));
     }
 
 
@@ -38,11 +38,11 @@ public class TestPaysDao {
     public void shouldReturnSingleListSportArrayHasOnline()
     {
       
-        when(reader.readPays()).thenReturn(new String[]{"1'europe;allemagne"});
-        List<Pays> pays = dao.getListePays();
+        when(reader.readPays()).thenReturn(new String[]{"161;RSA;Afrique du Sud"});
+        List<Pays> pays = new PaysDao(new FileReader()).getListePays();
         assertThat(pays,is(not(empty())));
-        assertThat(pays,hasSize(1));
-        assertThat(pays,contains(new Pays(1,"europe","allemagne")));
+        assertThat(pays,hasSize(93));
+        assertThat(pays,containsInAnyOrder(new Pays(161,"RSA","Afrique du Sud")));
         
     }
 }

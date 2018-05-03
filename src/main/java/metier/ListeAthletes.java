@@ -1,6 +1,8 @@
 package metier;
 
 import dao.AthleteDao;
+import dao.FileReader;
+import dao.PaysDao;
 import domaine.Athlete;
 import domaine.Pays;
 import domaine.Sport;
@@ -13,7 +15,7 @@ public class ListeAthletes extends ListeObjects {
    }
 
     public void charger(Pays p, Sport s) {
-        aListe = AthleteDao.getListeAthletes(p, s);
+        aListe = new AthleteDao(new FileReader()).getListeAthletes(p,s);
         setChanged(); notifyObservers(new Action(Action.LOAD));
    }
 

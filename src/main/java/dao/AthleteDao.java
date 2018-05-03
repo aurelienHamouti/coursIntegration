@@ -9,9 +9,11 @@ import domaine.Sport;
 
 public class AthleteDao {
     
+    public AthleteDao(FileReader reader){}
+    
     private static final String FICHIER_ATHLETES = "Athletes.txt";
 
-    public static ArrayList getListeAthletes(Pays pays, Sport sport) {
+    public ArrayList getListeAthletes(Pays pays, Sport sport) {
         String[] tabAthletes = FileStr.read(FICHIER_ATHLETES);
         ArrayList aLst = new ArrayList();
         for (int i=0; i<tabAthletes.length; i++) {

@@ -3,6 +3,8 @@ package dao;
 import outils.FileStr;
 
 public class FileReader {
+    
+    public FileReader(){}
 
     private static final String FICHIER_PAYS = "Pays.txt";
     private static final String FICHIER_SPORTS = "Sports.txt";
