@@ -1,0 +1,93 @@
+161;RSA;Afrique du Sud
+2;ALB;Albanie
+74;GER;Allemagne
+4;AND;Andorre
+7;ARG;Argentine
+8;ARM;Arménie
+144;OAR;Athlètes Olympiques de Russie
+11;AUS;Australie
+12;AUT;Autriche
+13;AZE;Azerbaïdjan
+18;BEL;Belgique
+20;BER;Bermudes
+24;BLR;Biélorussie
+25;BOL;Bolivie
+22;BIH;Bosnie-Herzégovine
+27;BRA;Brésil
+30;BUL;Bulgarie
+34;CAN;Canada
+38;CHI;Chili
+39;CHN;Chine
+51;CYP;Chypre
+44;COL;Colombie
+46;COR;Corée
+156;PRK;Corée du Nord
+103;KOR;Corée du Sud
+49;CRO;Croatie
+53;DEN;Danemark
+57;ECU;Équateur
+59;ERI;Érythrée
+61;ESP;Espagne
+62;EST;Estonie
+201;USA;États-Unis
+65;FIN;Finlande
+66;FRA;France
+72;GEO;Géorgie
+75;GHA;Ghana
+76;GRE;Grèce
+83;HKG;Hong Kong
+85;HUN;Hongrie
+87;IND;Inde
+88;IRI;Iran
+89;IRL;Irlande
+91;ISL;Islande
+92;ISR;Israël
+94;ITA;Italie
+96;JAM;Jamaïque
+98;JPN;Japon
+99;KAZ;Kazakhstan
+100;KEN;Kenya
+101;KGZ;Kirghizstan
+104;KOS;Kosovo
+108;LAT;Lettonie
+110;LBN;Liban
+114;LIE;Liechtenstein
+115;LTU;Lituanie
+116;LUX;Luxembourg
+117;MAD;Madagascar
+119;MAS;Malaisie
+128;MLT;Malte
+118;MAR;Maroc
+123;MEX;Mexique
+121;MDA;Moldavie
+130;MON;Monaco
+124;MGL;Mongolie
+129;MNE;Monténégro
+139;NGR;Nigeria
+141;NOR;Norvège
+143;NZL;Nouvelle-Zélande
+202;UZB;Ouzbékistan
+146;PAK;Pakistan
+137;NED;Pays-Bas
+150;PHI;Philippines
+154;POL;Pologne
+157;PUR;Porto Rico
+155;POR;Portugal
+126;MKD;République de Macédoine
+52;CZE;République tchèque
+160;ROU;Roumanie
+70;GBR;Royaume-Uni
+171;SMR;Saint-Marin
+174;SRB;Serbie
+167;SIN;Singapour
+181;SVK;Slovaquie
+170;SLO;Slovénie
+182;SWE;Suède
+179;SUI;Suisse
+192;TPE;Taipei chinois
+187;THA;Thaïlande
+190;TLS;Timor oriental
+191;TOG;Togo
+186;TGA;Tonga
+195;TUR;Turquie
+199;UKR;Ukraine

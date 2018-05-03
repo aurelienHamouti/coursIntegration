@@ -1,0 +1,15 @@
+1;Biathlon
+2;Bobsleigh
+3;Combiné nordique
+4;Curling
+5;Hockey sur glace
+6;Luge
+7;Patinage artistique
+8;Patinage de vitesse
+9;Saut à ski
+10;Short-track
+11;Skeleton
+12;Ski acrobatique
+13;Ski alpin
+14;Ski de fond
+15;Snowboard
