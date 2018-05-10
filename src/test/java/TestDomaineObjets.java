@@ -40,6 +40,7 @@ public class TestDomaineObjets {
         Athlete p = new Athlete(9,"athlete9Prenom","athlete9Nom",new Pays(),new Sport());
         Athlete p2 = new Athlete(9,"athlete9Prenom","athlete9Nom",new Pays(),new Sport());
         assertEquals(p, p2);
+        assertTrue(p.equals(p2));
     }
     
     @Test
@@ -61,7 +62,7 @@ public class TestDomaineObjets {
     public void toStringTestAthlete()
     {
         Athlete p = new Athlete(9,"athlete9Prenom","athlete9Nom",new Pays(),new Sport());
-        assertTrue(p.toString().equals("athlete9Prenom athlete9Nom"));
+        assertTrue(p.toString() == "athlete9Prenom athlete9Nom");
     }
     
     @Test
@@ -89,5 +90,18 @@ public class TestDomaineObjets {
         Sport p2 = new Sport(10,"sport1");
         assertEquals(p.compareStringTest("123","123"), p2.compareStringTest("123","123"));
     }  
+    
+    
+    ///////////// Test Athlete /////////////
+    @Test
+    public void getterTestAthlete()
+    {
+        Athlete p = new Athlete(9,"athlete9Prenom","athlete9Nom",new Pays(),new Sport());
+        assertTrue(p.getNo() == 9);
+        assertTrue(p.getNom() == "athlete9Nom");
+        assertTrue(p.getPrenom() == "athlete9Prenom");
+        assertTrue(p.getPays().equals(new Pays()));
+        assertTrue(p.getSport().equals(new Sport()));
+    } 
     
 }

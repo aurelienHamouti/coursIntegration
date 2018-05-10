@@ -1,5 +1,5 @@
 package vue;
-
+import java.awt.List;
 import metier.ListePays;
 import metier.ListeSports;
 import metier.ListeAthletes;
@@ -15,6 +15,10 @@ public class FrmMain extends java.awt.Frame {
         initComponents();//initialisation
         chargerDonnees();
     }
+    
+    public List getLstPays (){return lstPays;}
+    public List getLstSports (){return lstPays;}
+    public List getlstAthletes (){return lstAthletes;}
 
     private void chargerDonnees() {
         listePays = new ListePays(new ObsPourLstPays(lstPays));

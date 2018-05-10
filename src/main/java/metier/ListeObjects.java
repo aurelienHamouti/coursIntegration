@@ -1,5 +1,4 @@
 package metier;
-
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ abstract class ListeObjects extends Observable {
     public static final int NO_POS = -1;    /* Valeur de la position courante non définie */
     private int posCrt = NO_POS;            /* La position courante: initialement, pas de position courante */
     
-    protected ListeObjects() {}
+    //protected ListeObjects() {}
     protected ListeObjects(Observer obs) { if (obs != null) { addObserver(obs); } }
 
     /** Retourne le nombre d'Objects de la liste. */
@@ -43,4 +42,9 @@ abstract class ListeObjects extends Observable {
         if (pos < 0 || pos >= aListe.size()) { return null; }
         return aListe.get(pos);
     }
+        
+    protected ArrayList getList() {return aListe;}
+    
+
+    
 }
