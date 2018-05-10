@@ -3,6 +3,8 @@ import java.util.List;
 import dao.PaysDao;
 import domaine.Pays;
 
+import java.util.ArrayList;
+
 import static org.mockito.Mockito.*;
 import static org.mockito.Matchers.*;
 import static org.testng.Assert.*;
@@ -30,19 +32,35 @@ public class TestPaysDao {
     {
         when(reader.readPays()).thenReturn(new String[]{});
         List<Pays> pays = new PaysDao(new FileReader()).getListePays();
-		assertThat(pays.isEmpty(), is(false));
+        assertThat(pays.isEmpty(), is(false));
     }
 
 
     @Test
     public void shouldReturnSingleListSportArrayHasOnline()
     {
-      
         when(reader.readPays()).thenReturn(new String[]{"161;RSA;Afrique du Sud"});
         List<Pays> pays = new PaysDao(new FileReader()).getListePays();
         assertThat(pays,is(not(empty())));
         assertThat(pays,hasSize(93));
         assertThat(pays,hasItem(new Pays(161,"RSA","Afrique du Sud")));
-        
     }
+    
+    @Test
+    public void shouldBeArraylist()
+    {
+        List<Pays> o = new PaysDao(new FileReader()).getListePays();
+        assertTrue(o instanceof ArrayList);
+    }
+    
+    @Test
+    public void shouldBeParsing()
+    {
+        List<Pays> o = new PaysDao(new FileReader()).getListePays();
+        assertTrue(o instanceof ArrayList);
+    }
+    
+    
+    
+    
 }

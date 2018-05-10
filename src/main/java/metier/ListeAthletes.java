@@ -2,7 +2,6 @@ package metier;
 
 import dao.AthleteDao;
 import dao.FileReader;
-import dao.PaysDao;
 import domaine.Athlete;
 import domaine.Pays;
 import domaine.Sport;

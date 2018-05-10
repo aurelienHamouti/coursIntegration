@@ -13,6 +13,16 @@ public class AthleteDao {
     
     private static final String FICHIER_ATHLETES = "Athletes.txt";
 
+    public ArrayList getListeAthletes() {
+        String[] tabAthletes = FileStr.read(FICHIER_ATHLETES);
+        ArrayList aLst = new ArrayList();
+        for (int i=0; i<tabAthletes.length; i++) {
+            StringTokenizer strT = new StringTokenizer(tabAthletes[i], ";");
+             aLst.add(strT.nextToken());
+        }
+        return aLst;
+    }
+    
     public ArrayList getListeAthletes(Pays pays, Sport sport) {
         String[] tabAthletes = FileStr.read(FICHIER_ATHLETES);
         ArrayList aLst = new ArrayList();
