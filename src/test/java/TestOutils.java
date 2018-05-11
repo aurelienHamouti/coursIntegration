@@ -42,15 +42,14 @@ public class TestOutils {
         List<Athlete> athlete = new AthleteDao(new FileReader()).getListeAthletes();
         assertThat(athlete.isEmpty(), is(false));         
     }
-                
+       */         
     @Test
     public void shouldBeArraylist()
     {
-        ArrayList lstSports = daoS.getListeSports();
-        ArrayList lstPays = daoP.getListePays();
-        List<Athlete> Athlete = new AthleteDao(new FileReader()).getListeAthletes((Pays)lstPays.get(0),(Sport)lstSports.get(0));
-        assertTrue(Athlete instanceof ArrayList);
+      if(Validation.isIntValid("1")){
+          System.out.print("test réussi");
+      };
         
     }
-    */
+    
 }

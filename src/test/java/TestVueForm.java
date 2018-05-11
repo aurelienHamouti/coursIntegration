@@ -8,6 +8,7 @@ import metier.ListeAthletes;
 import metier.ListePays;
 import metier.ListeSports;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -31,31 +32,30 @@ public class TestVueForm {
     private ListeAthletes listeAthletes;
     private SportDao daoS;
     private PaysDao daoP;
-    private FileReader reader;
+    private ObsPourLstAthletes obs;
 
     @BeforeMethod
     protected void setUp()
     {
-        listePays = mock(ListePays.class);
+        obs = mock(ObsPourLstAthletes.class);
         listeSports = mock(ListeSports.class);
         listeAthletes = mock(ListeAthletes.class);
         
-        daoS = new SportDao(reader);
-        daoP = new PaysDao(reader);
+       
     }
     
-    ////////////// test des getteurs ////////////////////
     
     @Test
-    public void TestgetPaysListePays()
+    public void TestUpdateObserver()
     {
-        ListePays p = new ListePays(new ObsPourLstPays(new vue.FrmMain().getLstPays()));
-        ListePays p2 = new ListePays(new ObsPourLstPays(new vue.FrmMain().getLstPays()));
         
+        ListeAthletes p = new ListeAthletes(new ObsPourLstAthletes(new vue.FrmMain().getlstAthletes()));   
         ObsPourLstAthletes obs = new ObsPourLstAthletes(new vue.FrmMain().getlstAthletes());
-        obs.update(p, new Action(2));
-       
-        assertEquals(p.getPays(), p2.getPays());
+        
+
+//assertTrue();
+        //verify
+        //installer bit pour les tests de mutants
     }
     
     

@@ -1,5 +1,6 @@
 package vue;
 import java.awt.List;
+import java.awt.TextField;
 import metier.ListePays;
 import metier.ListeSports;
 import metier.ListeAthletes;
@@ -19,17 +20,22 @@ public class FrmMain extends java.awt.Frame {
     public List getLstPays (){return lstPays;}
     public List getLstSports (){return lstPays;}
     public List getlstAthletes (){return lstAthletes;}
+    public TextField getTfNo (){return tfNo;}
+    public TextField getTfNom (){return tfNom;}
+    public TextField getTfPays (){return tfPays;}
+    public TextField getTfPrenom (){return tfPrenom;}
+    public TextField getTfSport (){return tfSport;}
 
     private void chargerDonnees() {
         listePays = new ListePays(new ObsPourLstPays(lstPays));
         listeSports = new ListeSports(new ObsPourLstSports(lstSports));
         listeAthletes = new ListeAthletes(new ObsPourLstAthletes(lstAthletes));
-        listeAthletes.addObserver(new ObsPourDetail(tfNo, tfPrenom, tfNom, tfPays, tfSport));
+        //listeAthletes.addObserver(new ObsPourDetail(tfNo, tfPrenom, tfNom, tfPays, tfSport));
         
         
-        Observer obs = new ObsPourLoadAthletes(listeAthletes, listePays, listeSports);
-        listePays.addObserver(obs);
-        listeSports.addObserver(obs);
+        //Observer obs = new ObsPourLoadAthletes(listeAthletes, listePays, listeSports);
+        //listePays.addObserver(obs);
+        //listeSports.addObserver(obs);
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
