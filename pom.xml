@@ -102,6 +102,16 @@
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
 				<version>0.32</version>
+				
+ <configuration>
+        <targetClasses>
+            <param>dao*</param>
+        </targetClasses>
+        <targetTests>
+            <param>com.test*</param>
+        </targetTests>
+</configuration>
+ 
 			</plugin>
         </plugins>
 		
