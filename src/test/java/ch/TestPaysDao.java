@@ -1,6 +1,9 @@
+package ch;
+
+
 import dao.FileReader;
 import java.util.List;
-import dao.SportDao;
+import dao.PaysDao;
 import domaine.Pays;
 
 import java.util.ArrayList;
@@ -16,22 +19,22 @@ import org.testng.annotations.Test;
 import org.testng.annotations.DataProvider;
 
 
-public class TestSportDao {
-    private SportDao dao;
+public class TestPaysDao {
+    private PaysDao dao;
     private FileReader reader;
 
     @BeforeMethod
     protected void setUp()
     {
         reader = mock(FileReader.class);
-        dao = new SportDao(reader);
+        dao = new PaysDao(reader);
     }
 
     @Test
     public void shouldReturnEmptyListWhenArrayEmpty()
     {
         when(reader.readPays()).thenReturn(new String[]{});
-        List<Pays> pays = new SportDao(new FileReader()).getListeSports();
+        List<Pays> pays = new PaysDao(new FileReader()).getListePays();
         assertThat(pays.isEmpty(), is(false));
     }
 
@@ -39,21 +42,28 @@ public class TestSportDao {
     @Test
     public void shouldReturnSingleListSportArrayHasOnline()
     {
-        /*
         when(reader.readPays()).thenReturn(new String[]{"161;RSA;Afrique du Sud"});
-        List<Pays> pays = new SportDao(new FileReader()).getListeSports();
+        List<Pays> pays = new PaysDao(new FileReader()).getListePays();
         assertThat(pays,is(not(empty())));
         assertThat(pays,hasSize(93));
         assertThat(pays,hasItem(new Pays(161,"RSA","Afrique du Sud")));
-        */
     }
     
     @Test
     public void shouldBeArraylist()
     {
-        List<Pays> o = new SportDao(new FileReader()).getListeSports();
+        List<Pays> o = new PaysDao(new FileReader()).getListePays();
         assertTrue(o instanceof ArrayList);
     }
+    
+    @Test
+    public void shouldBeParsing()
+    {
+        List<Pays> o = new PaysDao(new FileReader()).getListePays();
+        assertTrue(o instanceof ArrayList);
+    }
+    
+    
     
     
 }

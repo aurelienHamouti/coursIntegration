@@ -1,3 +1,6 @@
+package ch;
+
+
 import dao.FileReader;
 import java.util.List;
 import dao.AthleteDao;
