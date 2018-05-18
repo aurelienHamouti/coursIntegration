@@ -1,6 +1,9 @@
 package ch.hesge.ci;
 
 
+
+
+import ch.hesge.ci.*;
 import domaine.Pays;
 import domaine.Athlete;
 import domaine.Sport;

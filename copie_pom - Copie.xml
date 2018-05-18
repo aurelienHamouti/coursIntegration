@@ -106,9 +106,6 @@
 					<excludedClasses>
                         ch.hesge.ci.Main
 					</excludedClasses>
-					<targetTests>
-						<param>ch.hesge.ci.Test*</param>
-					</targetTests>
 					
 				</configuration>
 			</plugin>
